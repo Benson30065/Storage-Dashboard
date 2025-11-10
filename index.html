@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Storage Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>📦 Storage Dashboard</h1>
+  </header>
+
+  <div class="container">
+    <div class="sidebar">
+      <h2>Menu</h2>
+      <p>Dashboard</p>
+      <p>Settings</p>
+    </div>
+
+    <div class="main">
+      <div id="emailGate">
+        <h2>Enter your email to continue</h2>
+        <input type="email" id="emailInput" placeholder="you@example.com" required>
+        <button onclick="verifyEmail()">Verify Email</button>
+        <p id="errorMsg" style="color:red;"></p>
+      </div>
+
+      <div id="dashboard" class="hidden">
+        <h2>Welcome to your storage</h2>
+        <form id="storageForm">
+          <input type="text" id="itemInput" placeholder="Enter item..." required>
+          <button type="submit">Add</button>
+        </form>
+        <ul id="itemList"></ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
